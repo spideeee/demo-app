@@ -23,10 +23,34 @@
 		<script src="app/js/app.js"></script>
 	</head>
 	<body>
-		<div class="wrapper">
+		<div class="wrapper app">
 			<div class="header">
+				
+			</div>
+			<div class="list">
+				<div ng-repeat="n in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]">
+					{{n}}
+					</br>
+					{{n}}
+					</br>
+					{{n}}
+				</div>
+			</div>
+			<div class="chat">
 				
 			</div>
 		</div>
 	</body>
+	<script>
+	(function(){
+		var Width = screen.width > 1024 ? 1024 : screen.width,
+			Height = screen.height > 768 ? 768 : screen.height;
+		
+		$(".app").css({
+			"min-width":Width/2+"px",
+			"min-height":Height/2+"px",
+		})
+		console.log(Width,Height);
+	})();
+	</script>
 </html>
